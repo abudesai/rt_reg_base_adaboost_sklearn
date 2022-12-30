@@ -1,0 +1,32 @@
+[
+  {
+    "name": "n_estimators",
+    "short_desc": "Maximum number of estimators at which boosting is terminated",
+    "default": 250,
+    "type": "real",
+    "range_low": 50,
+    "range_high": 300,
+    "search_type": "uniform",
+    "run_HPO": true
+  },
+
+  {
+    "name": "learning_rate",
+    "short_desc": "Learning rate for each boosting iteration",
+    "default": 1e-2,
+    "type": "real",
+    "range_low": 1e-5,
+    "range_high": 1,
+    "search_type": "log-uniform",
+    "run_HPO": true
+  },
+
+  {
+    "name": "loss",
+    "short_desc": "The loss function to use when updating the weights after each boosting iteration.",
+    "default": "square",
+    "type": "categorical",
+    "categorical_vals": ["linear", "square", "exponential"],
+    "run_HPO": true
+  }
+]
